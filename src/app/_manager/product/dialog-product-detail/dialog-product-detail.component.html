@@ -1,0 +1,28 @@
+<div class="background-container">
+  <div class="d-flex flex-column">
+    <mat-form-field appearance="fill">
+      <mat-label>Tên</mat-label>
+      <input matInput placeholder="Tên sản phẩm" [(ngModel)]="productDto.name" [value]="productDto.name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Mã</mat-label>
+      <input matInputrequired placeholder="Mã sản phẩm" disabled [value]="productDto.code">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Mô tả</mat-label>
+      <input matInputrequired placeholder="Mô tả" [(ngModel)]="productDto.description" disabled
+             [value]="productDto.description">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Ghi chú</mat-label>
+      <input matInputrequired placeholder="Ghi chú cho sản phẩm" [(ngModel)]="productDto.note" required
+             [value]="productDto.note">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Đóng</button>
+    <button mat-button [mat-dialog-close]="productDto" cdkFocusInitial>Ghi lại</button>
+  </div>
+
+</div>
+

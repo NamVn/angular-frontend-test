@@ -1,0 +1,21 @@
+<div class="background-container">
+<form [formGroup]="loginForm" class="login-container" (ngSubmit)="onSubmit()">
+    <div class="d-flex flex-column">
+      <mat-form-field appearance="fill">
+        <mat-label>Nhập email</mat-label>
+        <input matInput placeholder="abc@gmail.com" formControlName="email" required [errorStateMatcher]="matcher">
+        <mat-error *ngIf="f.email.invalid">{{getErrorMessageEmail()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Nhập mật khẩu</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" required [errorStateMatcher]="matcher" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ẩn mật khẩu'"
+                [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="f.password.invalid">{{getErrorMessagePassword()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <button mat-stroked-button color="primary" class="btn-center">Đăng nhập</button>
+  </form>
+</div>

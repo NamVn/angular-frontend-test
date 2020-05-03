@@ -1,0 +1,26 @@
+<div *ngIf="isShowNavBar" class="topnav">
+  <div class="left-navbar">
+    <a routerLink="/home" class="active">Trang chủ</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Hệ thống
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="/account">Tài khoản</a>
+        <a routerLink="/role">Vai trò</a>
+        <a routerLink="/permission">Quyền</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn" routerLink="/product">Sản phẩm
+        <i class="fa fa-caret-down"></i>
+      </button>
+    </div>
+  </div>
+  <div class="right-navbar">
+    <a routerLink="/logout">Đăng xuất</a>
+  </div>
+
+</div>

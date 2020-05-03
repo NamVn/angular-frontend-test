@@ -1,0 +1,18 @@
+<app-advance-search class="center"></app-advance-search>
+<mat-tab-group>
+  <mat-tab label="Chờ xử lý" #matTabWait (click)="setTypeTabView({code:'TAB_WAIT'})">
+    <ng-template matTabContent>
+      <app-product-wait></app-product-wait>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Đã xử lý" #matTabDone (click)="setTypeTabView({code:'TAB_DONE'})">
+    <ng-template matTabContent>
+      <app-product-done></app-product-done>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Có vấn đề" #matTabProblem (click)="setTypeTabView({code:'TAB_PROBLEM'})">
+    <ng-template matTabContent>
+      <app-product-problem></app-product-problem>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

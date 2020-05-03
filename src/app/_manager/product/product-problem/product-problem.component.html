@@ -1,0 +1,23 @@
+<p>Các sản phẩm có vấn đề</p>
+<table *ngIf="productList">
+  <tr>
+    <th>No.</th>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <ng-container *ngFor="let product of productList">
+    <app-product-detail [product]="product">
+      <button mat-raised-button
+              matTooltip="Chỉnh sửa ghi chú sản phẩm"
+              [matTooltipPosition]='toolTipPosition'
+              aria-label="Button that displays a tooltip in various positions"
+              [appProductItem]="product" (emitterProduct)="openDetailDialog($event)">
+        Chỉnh sửa
+      </button>
+    </app-product-detail>
+  </ng-container>
+</table>
+
+

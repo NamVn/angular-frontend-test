@@ -19,7 +19,7 @@ export class PermissionService {
    * Lấy danh sách các menu trong hệ thống
    * @param roleNames
    */
-  getNavigationBar(roleNames: []) {
+  getPermissionTree(roleNames: []) {
     // const params: URLSearchParams = new URLSearchParams();
     // params.append('roleName', 'ROLE_MANAGER');
     // params.append('userName', 'admin');

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {TabService} from '../../_manager/product/tab.service';
-import {ProductService} from '../../_manager/product/product.service';
+import {TabService} from '../../_staff/product/tab.service';
+import {ProductService} from '../../_staff/product/product.service';
 
 @Component({
   selector: 'app-advance-search',

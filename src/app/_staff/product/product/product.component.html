@@ -1,16 +1,21 @@
 <app-advance-search class="center"></app-advance-search>
 <mat-tab-group>
+<!--  Tab các sản phẩm chưa xử lý -->
+<!--  Ta sẽ mở dialog để thêm ghi chú vào cho sản phẩm-->
+<!--  Sau khi thêm ghi chú xong thì sẽ cập nhật xuống backend: chuyển trạng thái sản phẩm sang sản phẩm đã xử lý-->
   <mat-tab label="Chờ xử lý" #matTabWait (click)="setTypeTabView({code:'TAB_WAIT'})">
     <ng-template matTabContent>
       <app-product-wait></app-product-wait>
     </ng-template>
   </mat-tab>
+<!--  Tab các sản phẩm đã xử lý-->
   <mat-tab label="Đã xử lý" #matTabDone (click)="setTypeTabView({code:'TAB_DONE'})">
     <ng-template matTabContent>
       <app-product-done></app-product-done>
     </ng-template>
   </mat-tab>
-  <mat-tab label="Có vấn đề" #matTabProblem (click)="setTypeTabView({code:'TAB_PROBLEM'})">
+<!--  Tab các sản phẩm bị hỏng do nhân viên khác yêu cầu xem xét lại-->
+  <mat-tab label="Xem xét lại" #matTabProblem (click)="setTypeTabView({code:'TAB_PROBLEM'})">
     <ng-template matTabContent>
       <app-product-problem></app-product-problem>
     </ng-template>

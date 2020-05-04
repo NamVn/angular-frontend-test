@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {Product} from '../product';
 import {ProductService} from '../product.service';
-import {DialogSendStaffComponent} from '../dialog-send-staff/dialog-send-staff.component';
+import {DialogSendStaffComponent} from '../../../_manager/dialog-send-staff/dialog-send-staff.component';
 import {DialogProductDetailComponent} from '../dialog-product-detail/dialog-product-detail.component';
 import {MatDialog} from '@angular/material/dialog';
 

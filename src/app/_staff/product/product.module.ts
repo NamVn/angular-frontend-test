@@ -4,7 +4,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductDoneComponent } from './product-done/product-done.component';
 import { ProductWaitComponent } from './product-wait/product-wait.component';
 import { ProductProblemComponent } from './product-problem/product-problem.component';
-import { DialogSendStaffComponent } from './dialog-send-staff/dialog-send-staff.component';
+import { DialogSendStaffComponent } from '../../_manager/dialog-send-staff/dialog-send-staff.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {AppModule} from '../../app.module';

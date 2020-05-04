@@ -23,10 +23,10 @@ export class AppComponent implements OnInit {
         this.authService.currentTokenObservable.subscribe(jsonToken => {
             this.isShowNavBar = this.authService.isLoggedIn();
             if (this.isShowNavBar) {
-                this.permissionService.getNavigationBar([]).subscribe(pers => {
-                    // const navigationHtml = this.permissionService.getNavbar(pers);
-                    // this.navBar = this.domSanitizer.bypassSecurityTrustHtml(navigationHtml);
-                });
+                // this.permissionService.getNavigationBar([]).subscribe(pers => {
+                //     // const navigationHtml = this.permissionService.getNavbar(pers);
+                //     // this.navBar = this.domSanitizer.bypassSecurityTrustHtml(navigationHtml);
+                // });
             }
         });
     }

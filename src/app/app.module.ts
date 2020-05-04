@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material/slider';
 import { LoginComponent } from './_auth/login/login.component';
 import { HomeComponent } from './home/home.component';
-import { OrderComponent } from './_components_core/order/order.component';
+
 import { AdvanceSearchComponent } from './_components_core/advance-search/advance-search.component';
 import { QuickSearchComponent } from './_components_core/quick-search/quick-search.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -20,22 +20,28 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './_components_core/menu/menu.component';
 import {MatCardModule} from '@angular/material/card';
-import { ProductDetailComponent } from './_components_core/product-detail/product-detail.component';
+import { ProductItemComponent } from './_components_core/product-item/product-item.component';
 import { PermissionComponent } from './_manager/permission/permission.component';
+import { ProductComponent } from './_manager/product/product.component';
+import { DialogProductDetailComponent } from './_manager/dialog-product-detail/dialog-product-detail.component';
+import { ProductDetailComponent } from './_manager/product-detail/product-detail.component';
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    OrderComponent,
     AdvanceSearchComponent,
     QuickSearchComponent,
     PageNotFoundComponent,
     AlertComponent,
     MenuComponent,
-    ProductDetailComponent,
-    PermissionComponent
+    ProductItemComponent,
+    PermissionComponent,
+    ProductComponent,
+    DialogProductDetailComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -48,11 +54,12 @@ import { PermissionComponent } from './_manager/permission/permission.component'
     MatInputModule,
     RouterModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatTreeModule
   ],
   providers: [],
   exports: [
-    ProductDetailComponent,
+    ProductItemComponent,
     AdvanceSearchComponent
   ],
   bootstrap: [AppComponent]

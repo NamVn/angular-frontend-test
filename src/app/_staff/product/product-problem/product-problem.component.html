@@ -8,7 +8,7 @@
     <th>Action</th>
   </tr>
   <ng-container *ngFor="let product of productList">
-    <app-product-detail [product]="product">
+    <app-product-item [product]="product">
       <button mat-raised-button
               matTooltip="Chỉnh sửa ghi chú sản phẩm"
               [matTooltipPosition]='toolTipPosition'
@@ -16,7 +16,7 @@
               [appProductItem]="product" (emitterProduct)="openDetailDialog($event)">
         Chỉnh sửa
       </button>
-    </app-product-detail>
+    </app-product-item>
   </ng-container>
 </table>
 
